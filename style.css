@@ -1,29 +1,42 @@
+:root {
+    --color-text-light: black; /* Kolor tekstu dla trybu jasnego */
+    --color-background-light: white; /* Kolor tła dla trybu jasnego */
+    --color-text-dark: white; /* Kolor tekstu dla trybu ciemnego */
+    --color-background-dark: #333; /* Kolor tła dla trybu ciemnego */
+}
+
+body {
+    color: var(--color-text-light);
+    background-color: var(--color-background-light);
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+}
 /* Resetowanie domyślnych stylów */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
-/* Stylizacja nagłówka i paska nawigacyjnego */
 header {
+    background-color: var(--color-background-dark); /* Tło nagłówka dla trybu ciemnego */
+    color: var(--color-text-dark); /* Kolor tekstu w nagłówku dla trybu ciemnego */
     width: 100%;
     position: fixed;
     top: 0;
     left: 0;
-    background-color: #333;
     z-index: 1000;
 }
-
 .navbar {
     display: flex;
     justify-content: space-around;
     align-items: center;
     padding: 1rem;
 }
-
 .nav-item {
-    color: white;
+    color: var(--color-text-light); /* Kolor tekstu linków dla trybu jasnego */
+	color: white;
     text-decoration: none;
     font-size: 1.2rem;
 }
@@ -32,7 +45,6 @@ header {
     text-decoration: underline;
 }
 
-/* Stylizacja głównej sekcji */
 main {
     margin-top: 60px; /* Aby nagłówek nie zasłaniał treści */
     padding: 2rem;
