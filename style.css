@@ -1,0 +1,63 @@
+/* Resetowanie domyślnych stylów */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Stylizacja nagłówka i paska nawigacyjnego */
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #333;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem;
+}
+
+.nav-item {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.nav-item:hover {
+    text-decoration: underline;
+}
+
+/* Stylizacja głównej sekcji */
+main {
+    margin-top: 60px; /* Aby nagłówek nie zasłaniał treści */
+    padding: 2rem;
+}
+
+.buttons-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.buttons-section button {
+    margin: 1rem 0;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+/* Responsywność dla telefonów */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+    }
+    
+    .nav-item {
+        padding: 0.5rem 0;
+    }
+}
